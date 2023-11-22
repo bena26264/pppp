@@ -2,8 +2,7 @@ import pickle
 
 import numpy as np
 from flask import Flask, request, jsonify
-from waitress import serve
-#from ApiFlaskAndroid.wsgi import application
+
 
 model = pickle.load(open('model.pkl','rb'))
 
@@ -47,5 +46,5 @@ def predict():
 if __name__=='__main__':
     app.run(debug=True)
 
-#waitress-serve --listen=*:8000 myapp.wsgi:application
+
 
